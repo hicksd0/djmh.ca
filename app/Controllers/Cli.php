@@ -15,8 +15,6 @@ class Cli extends BaseController {
 	    
 		require_once '/home3/hicksdo/public_html/app/Libraries/Twilio/autoload.php';
 
-		// Find your Account Sid and Auth Token at twilio.com/console
-		// and set the environment variables. See http://twil.io/secure
 		$sid = "ACe2be71ab268b7a972687f74871fd6320";
 		$token = "464a29536c072b6a450395bd563da7be";
 		$twilio = new \Twilio\Rest\Client($sid, $token);
