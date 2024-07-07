@@ -15,10 +15,11 @@ class NotificationModel extends BaseModel
 	    
 		$db = \Config\Database::connect();
 		
-		$builder = $db->table('garbage_notifications');
+		$builder = $db->table('notification_schedule');
 		
-		$builder->select('user.first_name, user.phone_number, garbage_notifications.*');
-		$builder->join('user', 'user.id = garbage_notifications.user_id');
+		$builder->select('user.first_name, user.phone_number, notification_schedule.*');
+		$builder->join('user', 'user.id = notification_schedule.user_id');
+		$builder->where('notification_type_id', '1');
             
         $query = $builder->get();
 		$result = $query->getResult();

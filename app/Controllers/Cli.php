@@ -3,20 +3,27 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\NotificationModel;
+use \Twilio\Rest;
 
 class Cli extends BaseController {
+	
+	public function once_per_minute_tick()
+	{
+	    
+		$this->garbage_collection();
+	}
 	
 	public function garbage_collection()
 	{
 	    
 		date_default_timezone_set('EST5EDT');
 	    
-	    echo date("H:i:s", time());
+	    echo date("H:i:s", time())."\n";
 	    
 		require_once '/home3/hicksdo/public_html/app/Libraries/Twilio/autoload.php';
 
-		$sid = "ACe2be71ab268b7a972687f74871fd6320";
-		$token = "464a29536c072b6a450395bd563da7be";
+		$sid = getenv("TWILIO_SID");
+		$token = getenv("TWILIO_TOKEN");
 		$twilio = new \Twilio\Rest\Client($sid, $token);
 		
 		$this->NotificationModel = new NotificationModel();

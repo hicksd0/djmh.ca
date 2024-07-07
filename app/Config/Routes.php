@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Multitude::index');
 
 $routes->get('multitude/index', 'Multitude::index');
 $routes->get('multitude/stuff', 'Multitude::stuff');
@@ -15,3 +15,4 @@ $routes->get('auth/logout', 'Auth::logout');
 
 //$routes->get('cli/garbage_collection', 'Cli::garbage_collection');
 $routes->cli('cli/garbage_collection', 'Cli::garbage_collection');
+$routes->cli('cli/once_per_minute_tick', 'Cli::once_per_minute_tick');
