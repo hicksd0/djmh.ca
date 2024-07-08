@@ -10,7 +10,6 @@ class Multitude extends BaseController{
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
 
-        //$this->verify_login();
     }
 
 

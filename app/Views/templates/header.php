@@ -47,16 +47,34 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="<?php echo base_url(); ?>multitude/index">Home</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="<?php echo base_url(); ?>multitude/stuff">Stuff</a>
         </li>
+		<?php if($user["is_logged_in"]){ ?>
+			<li class="nav-item">
+				<a class="nav-link text-info" href="<?php echo base_url(); ?>dashboard/index">Dashboard</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link text-info" href="<?php echo base_url(); ?>dashboard/cars">Cars</a>
+			</li>
+		<?php } ?>
       </ul>
+	  <?php 
+	  if($user["is_logged_in"]){ ?>
 	  <div class="d-flex">
-        <a href="<?php echo base_url();?>auth/login" class="btn btn-outline-success" type="submit">Login</a>
+        <p class="nav-link text-white m-auto">Welcome, <?php echo $user["first_name"] . " " . $user["last_name"]; ?></p>
       </div>
+	  <div class="d-flex">
+        <a href="<?php echo base_url();?>auth/logout" class="btn btn-outline-success" type="submit">Logout</a>
+      </div>
+	  <?php } else { ?>
+		<div class="d-flex">
+			<a href="<?php echo base_url();?>auth/login" class="btn btn-outline-success" type="submit">Login</a>
+		</div>
+	  <?php } ?>
     </div>
   </nav>
 </header>
@@ -64,5 +82,17 @@
 <!-- Begin page content -->
 <main role="main" class="flex-shrink-0">
   <div class="container">
+	<!-- alert -->
+	<?php if(isset($user_error_message) && $user_error_message != "") { ?>
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		<strong>Whoops!</strong> <?php echo $user_error_message; ?>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<?php } ?>
+	
+	
+	
     <h1 class="mt-5"><?php echo $page_header; ?></h1>
 	  <!-- end header -->

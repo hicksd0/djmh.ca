@@ -50,27 +50,21 @@ abstract class BaseController extends Controller
     {
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
-
+		
         $this->data = Array();
         $this->data['page_title'] = 'djmh.ca a site for things.';
         $this->data['page_header'] = 'Default Header';
+		$this->data["user_error_message"] = "";
+		
+		$this->data["user"] = (array) session()->get('user');
+		if(count($this->data["user"]) == 0){
+			$this->data["user"]["is_logged_in"] = false;
+		}
     }
 	
-	public function verify_login(){
-		$controller = $this->router->fetch_class();
-		$method = $this->router->fetch_method();
-		
-		$session_data = $this->session->userdata;
-		
-		$user_data["is_logged_in"] = false;
-		if(isset($session_data) && isset($session_data["user"])){
-			$user_data = $session_data["user"];
-		}
-		
-		//access logic here to kick the user to the home page if they don't have access or are not logged in.
-		if ($user_data["is_logged_in"] == false){
-			redirect('/multitude/', 'refresh');
-		}
+	public function log_in_user($user){
+		$session = session();
+		$session->set('user', $user);
 	}
 
 	public function load_view($view_name){
