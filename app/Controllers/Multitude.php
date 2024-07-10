@@ -15,18 +15,29 @@ class Multitude extends BaseController{
 
 	public function index()
 	{
-		$this->data['page_title'] = "Welcome to djmh.ca";
-		$this->data['page_header'] = "Home is where the heart is.";
-		return $this->load_view('multitude/index');
-		
+		if($this->data["user"]["is_logged_in"]){
+			return redirect()->to('dashboard/index');
+		}
+		$this->data['page_header'] = "Maintain It Pro";
+		return $this->load_view('multitude/index');	
 	}
 	
-	public function stuff()
+	public function your_schedules()
 	{
-		$this->data['page_title'] = "This title changes.";
-		$this->data['page_header'] = "Usefull Stuff";
-		return $this->load_view('multitude/stuff');
-		
+		$this->data['page_header'] = "Your Schedules";
+		return $this->load_view('multitude/your_schedules');
+	}
+	
+	public function your_notifications()
+	{
+		$this->data['page_header'] = "Your Notifications";
+		return $this->load_view('multitude/your_notifications');
+	}
+	
+	public function your_assets()
+	{
+		$this->data['page_header'] = "Your Assets";
+		return $this->load_view('multitude/your_assets');
 	}
 	
 }

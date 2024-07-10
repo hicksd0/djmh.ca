@@ -8,7 +8,9 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Multitude::index');
 
 $routes->get('multitude/index', 'Multitude::index');
-$routes->get('multitude/stuff', 'Multitude::stuff');
+$routes->get('multitude/your-schedules', 'Multitude::your_schedules');
+$routes->get('multitude/your-notifications', 'Multitude::your_notifications');
+$routes->get('multitude/your-assets', 'Multitude::your_assets');
 
 $routes->get('auth/login', 'Auth::login');
 $routes->post('auth/login', 'Auth::login');

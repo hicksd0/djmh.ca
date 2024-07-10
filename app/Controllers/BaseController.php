@@ -52,7 +52,7 @@ abstract class BaseController extends Controller
         parent::initController($request, $response, $logger);
 		
         $this->data = Array();
-        $this->data['page_title'] = 'djmh.ca a site for things.';
+        $this->data['page_title'] = "Maintain It Pro";
         $this->data['page_header'] = 'Default Header';
 		$this->data["user_error_message"] = "";
 		

@@ -41,24 +41,24 @@
     <header>
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="<?php echo base_url(); ?>">djmh.ca</a>
+    <a class="navbar-brand" href="<?php echo base_url(); ?>">Maintain It Pro</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url(); ?>multitude/index">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url(); ?>multitude/stuff">Stuff</a>
-        </li>
+		<?php if(!$user["is_logged_in"]){ ?>
+			<li class="nav-item">
+				<a class="nav-link" href="<?php echo base_url(); ?>multitude/index">Home</a>
+			</li>
+		<?php } ?>
+        
 		<?php if($user["is_logged_in"]){ ?>
 			<li class="nav-item">
-				<a class="nav-link text-info" href="<?php echo base_url(); ?>dashboard/index">Dashboard</a>
+				<a class="nav-link" href="<?php echo base_url(); ?>dashboard/index">Dashboard</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-info" href="<?php echo base_url(); ?>dashboard/cars">Cars</a>
+				<a class="nav-link" href="<?php echo base_url(); ?>dashboard/cars">Cars</a>
 			</li>
 		<?php } ?>
       </ul>
@@ -68,11 +68,11 @@
         <p class="nav-link text-white m-auto">Welcome, <?php echo $user["first_name"] . " " . $user["last_name"]; ?></p>
       </div>
 	  <div class="d-flex">
-        <a href="<?php echo base_url();?>auth/logout" class="btn btn-outline-success" type="submit">Logout</a>
+        <a href="<?php echo base_url();?>auth/logout" class="btn btn-outline-primary" type="submit">Logout</a>
       </div>
 	  <?php } else { ?>
 		<div class="d-flex">
-			<a href="<?php echo base_url();?>auth/login" class="btn btn-outline-success" type="submit">Login</a>
+			<a href="<?php echo base_url();?>auth/login" class="btn btn-outline-primary" type="submit">Login</a>
 		</div>
 	  <?php } ?>
     </div>

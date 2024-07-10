@@ -18,9 +18,7 @@ class Dashboard extends BaseController
     public function index(): string
     {
 	    
-		$this->data['page_title'] = "Welcome to djmh.ca";
-
-		$this->data['page_header'] = "You are logged in!";
+		$this->data['page_header'] = "Dashboard";
 		return $this->load_view('dashboard/index', $this->data);
 		
 	}
