@@ -24,19 +24,19 @@ class Multitude extends BaseController{
 	
 	public function your_schedules()
 	{
-		$this->data['page_header'] = "Your Schedules";
+		$this->data['page_header'] = "Schedules";
 		return $this->load_view('multitude/your_schedules');
 	}
 	
 	public function your_notifications()
 	{
-		$this->data['page_header'] = "Your Notifications";
+		$this->data['page_header'] = "Notifications";
 		return $this->load_view('multitude/your_notifications');
 	}
 	
 	public function your_assets()
 	{
-		$this->data['page_header'] = "Your Assets";
+		$this->data['page_header'] = "Assets";
 		return $this->load_view('multitude/your_assets');
 	}
 	

@@ -27,5 +27,20 @@ class UserModel extends BaseModel
 		return $result;
 	}
 	
+	public function get_asset_group(){
+		
+		$db = \Config\Database::connect();
+		
+		$builder = $db->table('user');
+		
+		$builder->select('user.*');
+		$builder->where('email', $email);
+		$builder->where('password', $sha256_password);
+            
+        $query = $builder->get();
+		$result = $query->getRow();
+		
+		return $result;
+	}
 }
 ?>
