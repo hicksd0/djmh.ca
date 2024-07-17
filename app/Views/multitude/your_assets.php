@@ -4,7 +4,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div style="background-size: cover; background-image: url('<? echo base_url("assets/images/product_shelves.jpg");?>')" class=" rounded lead fw-normal col-6">
+		<div style="background-size: cover; background-image: url('<? echo base_url("supportassets/images/product_shelves.jpg");?>')" class=" rounded lead fw-normal col-6">
 			&nbsp;
 		</div>
 		<div class="lead fw-normal col-6">
@@ -17,7 +17,7 @@
 			<p>Maintain It Pro also offers powerful tools to streamline asset maintenance and ensure longevity. Design tailored maintenance schedules and automate reminders for inspections, repairs, and servicing. Customize workflows to match your operational processes, ensuring that maintenance tasks are assigned, tracked, and completed efficiently. With Maintain It Pro, you can minimize downtime, extend the lifespan of your assets, and reduce overall maintenance costs.</p>
 			<p>In addition to tracking and maintenance, Maintain It Pro provides insightful analytics to enhance your asset management strategy. Generate custom reports to analyze asset performance, identify trends, and uncover opportunities for improvement. Monitor asset utilization to ensure optimal deployment and make data-driven decisions about procurement and retirement. Maintain It Pro’s customizable asset management capabilities empower you to maximize the value of your assets, streamline operations, and achieve organizational goals with greater efficiency. Embrace the future of asset management with Maintain It Pro, and take control of your resources like never before.</p>
 		</div>
-		<div style="background-size: cover; background-image: url('<? echo base_url("assets/images/wrenches.jpg");?>')" class=" rounded lead fw-normal col-6">
+		<div style="background-size: cover; background-image: url('<? echo base_url("supportassets/images/wrenches.jpg");?>')" class=" rounded lead fw-normal col-6">
 			&nbsp;
 		</div>
 	</div>

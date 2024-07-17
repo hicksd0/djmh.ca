@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\VehicleModel;
+use App\Models\AssetModel;
 
 class Dashboard extends BaseController
 {
@@ -19,6 +20,11 @@ class Dashboard extends BaseController
     {
 	    
 		$this->data['page_header'] = "Dashboard";
+		
+		
+		$this->AssetModel = new AssetModel();
+		$this->data["assets"] = $this->AssetModel->get_assets($this->user["id"]);
+		
 		return $this->load_view('dashboard/index', $this->data);
 		
 	}

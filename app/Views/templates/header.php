@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <link rel="icon" href="<?php echo base_url(); ?>assets/images/favicon.ico">
+    <link rel="icon" href="<?php echo base_url(); ?>supportassets/images/favicon.ico">
 
     <title><?php echo $page_title; ?></title>
 
     <!-- get bootstrap -->
-	  <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	  <link href="<?php echo base_url(); ?>supportassets/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	
     <style>
       .bd-placeholder-img {
@@ -28,13 +28,13 @@
       }
     </style>
 	  <!-- get CSS -->
-	  <link href="<?php echo base_url(); ?>assets/css/styles.css" rel="stylesheet">
+	  <link href="<?php echo base_url(); ?>supportassets/css/styles.css" rel="stylesheet">
     
 	<!-- Bootstrap core JavaScript ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="<?php echo base_url(); ?>assets/js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-	<script src="<?php echo base_url(); ?>assets/js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+	<script src="<?php echo base_url(); ?>supportassets/js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+	<script src="<?php echo base_url(); ?>supportassets/js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="<?php echo base_url(); ?>supportassets/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
 	
   </head>
   <body class="d-flex flex-column h-100">

@@ -21,6 +21,7 @@ use Psr\Log\LoggerInterface;
  */
 abstract class BaseController extends Controller
 {
+	public $user;
     /**
      * Instance of the main Request object.
      *
@@ -56,7 +57,9 @@ abstract class BaseController extends Controller
         $this->data['page_header'] = 'Default Header';
 		$this->data["user_error_message"] = "";
 		
-		$this->data["user"] = (array) session()->get('user');
+		$this->user  = (array) session()->get('user');
+		$this->data["user"] = $this->user;
+		
 		if(count($this->data["user"]) == 0){
 			$this->data["user"]["is_logged_in"] = false;
 		}

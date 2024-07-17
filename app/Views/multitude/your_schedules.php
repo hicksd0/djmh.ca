@@ -8,12 +8,12 @@
 			<p>Maintain It Pro revolutionizes the way you manage and optimize your schedules, giving you unprecedented control over your time and tasks. With its user-friendly interface and robust features, you can design, build, and customize schedules to your exact specifications. Whether you're managing a personal calendar, coordinating a team project, or overseeing a large-scale operation, Maintain It Pro adapts to your needs, ensuring that every minute is accounted for and utilized effectively.</p>
 			<p>One of the standout features of Maintain It Pro is its flexibility. You can create schedules from scratch, tailoring each element to fit your unique requirements. Start by setting your goals and priorities, then break down tasks into manageable chunks. The intuitive drag-and-drop functionality allows you to easily rearrange activities, allocate resources, and adjust timelines. Need to accommodate sudden changes or unexpected events? No problem. Maintain It Pro lets you seamlessly modify your schedule on the fly, ensuring that you're always on top of your game.</p>
 		</div>
-		<div style="background-size: cover; background-image: url('<? echo base_url("assets/images/story_board.jpg");?>')" class=" rounded lead fw-normal col-6">
+		<div style="background-size: cover; background-image: url('<? echo base_url("supportassets/images/story_board.jpg");?>')" class=" rounded lead fw-normal col-6">
 			&nbsp;
 		</div>
 	</div>
 	<div class="row mt-5 mb-5">
-		<div style="background-size: cover; background-image: url('<? echo base_url("assets/images/php_code.jpg");?>')" class=" rounded lead fw-normal col-6">
+		<div style="background-size: cover; background-image: url('<? echo base_url("supportassets/images/php_code.jpg");?>')" class=" rounded lead fw-normal col-6">
 			&nbsp;
 		</div>
 		<div class="lead fw-normal col-6">

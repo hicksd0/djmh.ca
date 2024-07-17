@@ -4,7 +4,7 @@
 	RewriteCond %{SERVER_PORT} 80
 	RewriteRule ^(.*)$ https://maintainitpro.com//$1 [R,L]
 	
-	RewriteCond $1 !^(index\.php|assets|assets/css|assets/js|assets/etc|robots\.txt)
+	RewriteCond $1 !^(index\.php|supportassets|supportassets/css|supportassets/js|supportassets/etc|robots\.txt)
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
 

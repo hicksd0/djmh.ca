@@ -1,13 +1,26 @@
-<div class="row">
-	<div class="col-6">
-		<h3 class="text-center">Asset Maintenance</h3>
-		<canvas id="myChart1"></canvas>
+<?php if(isset($assets) && count($assets) == 0){ ?>
+	
+<div class="row lead">
+	<div class="col-12">
+		Whoops! It looks like you don't have any assets, lets start by adding some!
 	</div>
-	<div class="col-6">
-		<h3 class="text-center">Asset Breakdown</h3>
-		<canvas id="myChart2"></canvas>
+	<div class="col-12 mt-2">
+		<a href="<?php echo base_url();?>assets/add" class="btn btn-outline-primary" type="submit">Add an Asset</a>
 	</div>
 </div>
+		
+<?php } else { ?>
+	<div class="row">
+		<div class="col-6">
+			<h3 class="text-center">Asset Maintenance</h3>
+			<canvas id="myChart1"></canvas>
+		</div>
+		<div class="col-6">
+			<h3 class="text-center">Asset Breakdown</h3>
+			<canvas id="myChart2"></canvas>
+		</div>
+	</div>
+<?php } ?>
 
 <script>
 	
